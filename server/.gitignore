@@ -1,0 +1,6 @@
+
+#ignore the virtual env
+/env
+
+# this is like node_modules
+/__pycache__
