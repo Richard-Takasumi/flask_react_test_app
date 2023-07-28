@@ -5,7 +5,7 @@ Ensure to install "concurrently" and "flask" first.
 `npm install -g concurrently`
 `pip install flask`
 
-Then cd into client folder and install packages:
+Then cd into client folder and install packages:<br/>
 `cd client`
 `npm install`
 
