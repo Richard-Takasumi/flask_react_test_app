@@ -5,6 +5,7 @@ import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineStock } from "react-icons/ai";
 import { AiOutlineSetting } from "react-icons/ai";
+import { PiSuitcaseSimpleLight } from "react-icons/pi";
 import { Link } from 'react-router-dom'
 // create a side navigation component
 // it should have icons for each of the following:
@@ -16,8 +17,9 @@ export const SideNavigation = () => {
     return (
         <div className="side-navigation">
             <Link className='link' to="dashboard"> <MdOutlineDashboardCustomize className='icon'/> </Link>
-            <Link className='link' to="bonds"> <AiOutlineStock className='icon'/> </Link>
+            <Link className='link' to="bond-overview"> <AiOutlineStock className='icon'/> </Link>
             <Link className='link' to="watchlist"> <AiOutlineEye className='icon'/> </Link>
+            <Link className='link' to="portfolio"> <PiSuitcaseSimpleLight className='icon'/> </Link>
             <Link className='link' to="profile"> <BsPerson className='icon'/> </Link>
             <Link className='link' to="settings"> <AiOutlineSetting className='icon'/> </Link>
         </div>
