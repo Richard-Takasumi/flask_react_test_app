@@ -5,6 +5,9 @@ import CountrySelect from '../../components/country-select/CountrySelect'
 import CompanySelect from '../../components/company-select/CompanySelect'
 import BondTable from '../../components/bond-table/BondTable';
 import Button from '../../components/button/Button';
+import MyLineChart from '../../components/line-chart/LineChart';
+
+
 type DataRow = {
     id: number;
     name: string;
@@ -43,8 +46,8 @@ export const BondOverviewPage = () => {
           maturity: "30/10/2025",
           spread: "6.31",
           ytm: "8.960%",
-          moodysRating: "Ba",
-          crMigPred: "B",
+          moodysRating: "Aaa",
+          crMigPred: "Aa1",
           crMigCL: "52%",
           crSpreadPred: "4.2 (+6%)",
           crSpreadSL: "88%",
@@ -57,8 +60,8 @@ export const BondOverviewPage = () => {
           maturity: "30/10/2025",
           spread: "6.31",
           ytm: "8.960%",
-          moodysRating: "Ba",
-          crMigPred: "B",
+          moodysRating: "Ba1",
+          crMigPred: "Ba2",
           crMigCL: "52%",
           crSpreadPred: "4.2 (+6%)",
           crSpreadSL: "88%",
@@ -71,9 +74,107 @@ export const BondOverviewPage = () => {
           maturity: "30/10/2025",
           spread: "6.31",
           ytm: "8.960%",
-          moodysRating: "Ba",
-          crMigPred: "B",
+          moodysRating: "Caa1",
+          crMigPred: "B2",
           crMigCL: "52%",
+          crSpreadPred: "4.2 (+6%)",
+          crSpreadSL: "88%",
+        },
+        {
+          id: 4,
+          name: "MS4 INVF Global Convertible Bond Fund",
+          ticker: "LU12345678",
+          cpn: "4.15",
+          maturity: "30/10/2025",
+          spread: "6.31",
+          ytm: "8.960%",
+          moodysRating: "Caa1",
+          crMigPred: "Caa1",
+          crMigCL: "52%",
+          crSpreadPred: "4.2 (+6%)",
+          crSpreadSL: "88%",
+        },
+        {
+          id: 5,
+          name: "CREDIT SUISSE (LUX) GLOBAL CONVERTIBLE BOND FUND",
+          ticker: "LU12345678",
+          cpn: "4.15",
+          maturity: "30/10/2025",
+          spread: "6.31",
+          ytm: "8.960%",
+          moodysRating: "Aaa",
+          crMigPred: "Caa2",
+          crMigCL: "80%",
+          crSpreadPred: "4.2 (+6%)",
+          crSpreadSL: "88%",
+        },
+        {
+          id: 6,
+          name: "CREDIT SUISSE (LUX) GLOBAL CONVERTIBLE BOND FUND",
+          ticker: "LU12345678",
+          cpn: "4.15",
+          maturity: "30/10/2025",
+          spread: "6.31",
+          ytm: "8.960%",
+          moodysRating: "Aaa",
+          crMigPred: "Caa2",
+          crMigCL: "80%",
+          crSpreadPred: "4.2 (+6%)",
+          crSpreadSL: "88%",
+        },
+        {
+          id: 7,
+          name: "CREDIT SUISSE (LUX) GLOBAL CONVERTIBLE BOND FUND",
+          ticker: "LU12345678",
+          cpn: "4.15",
+          maturity: "30/10/2025",
+          spread: "6.31",
+          ytm: "8.960%",
+          moodysRating: "Aaa",
+          crMigPred: "Caa2",
+          crMigCL: "80%",
+          crSpreadPred: "4.2 (+6%)",
+          crSpreadSL: "88%",
+        },
+        {
+          id: 8,
+          name: "CREDIT SUISSE (LUX) GLOBAL CONVERTIBLE BOND FUND",
+          ticker: "LU12345678",
+          cpn: "4.15",
+          maturity: "30/10/2025",
+          spread: "6.31",
+          ytm: "8.960%",
+          moodysRating: "Aaa",
+          crMigPred: "Caa2",
+          crMigCL: "80%",
+          crSpreadPred: "4.2 (+6%)",
+          crSpreadSL: "88%",
+        },
+        {
+          id: 9,
+          name: "CREDIT SUISSE (LUX) GLOBAL CONVERTIBLE BOND FUND",
+          ticker: "LU12345678",
+          cpn: "4.15",
+          maturity: "30/10/2025",
+          spread: "6.31",
+          ytm: "8.960%",
+          moodysRating: "Aaa",
+          crMigPred: "Caa2",
+          crMigCL: "80%",
+          crSpreadPred: "4.2 (+6%)",
+          crSpreadSL: "88%",
+        },
+        {
+          id: 10,
+          name: "CREDIT SUISSE (LUX) GLOBAL CONVERTIBLE BOND FUND",
+          ticker: "LU12345678",
+          cpn: "4.15",
+          maturity: "30/10/2025",
+          spread: "6.31",
+          ytm: "8.960%",
+          moodysRating: "Aaa",
+          crMigPred: "Caa2",
+          crMigCL: "80%",
           crSpreadPred: "4.2 (+6%)",
           crSpreadSL: "88%",
         },
@@ -109,36 +210,46 @@ export const BondOverviewPage = () => {
             <div className='bond-table-container'>
                 <BondTable data={data} onRowSelected={handleRowSelected} />
             </div>
-            <div className='bond-selected-container'>
-                <div className='bond-selected-item'>
-                    {selectedRow && (<>
-                        <div className='bond-selected-title'>
-                            <div className='bond-selected-title-text'>
-                                <p className='bond-selected-name'>{selectedRow.name}</p>
-                                <p className='bond-selected-ticker'>{selectedRow.ticker}</p>
-                            </div>
-                            <div className='bond-selected-title-watchlist-button'>
-                                <Button text={"Watchlist +"}/>
-                            </div>
-                        </div>
-                        <div className='bond-selected-predictions'>
-                            <div className='bond-selected-credit-migration'>
-                                <h2> Probability of Credit Migration </h2>
-                                <div className='bond-selected-credit-migration-stats'>
-                                    <p className='bond-selected-credit-percentage'>{selectedRow.crMigCL}</p>
-                                    <p className='bond-selected-credit-moodysRating'>{selectedRow.moodysRating}</p>
-                                    <p className='bond-selected-credit-crMigPred'>{selectedRow.crMigPred}</p>
+            <div className='bond-selected-item-graph-container'>
+                <div className='bond-selected-container'>
+                    <div className='bond-selected-item'>
+                            <div className='bond-selected-title'>
+                                <div className='bond-selected-title-text'>
+                                    {selectedRow && (<>
+                                    <p className='bond-selected-name'>{selectedRow.name}</p>
+                                    <p className='bond-selected-ticker'>{selectedRow.ticker}</p> 
+                                    </>)}
+                                </div>
+                                <div className='bond-selected-title-watchlist-button'>
+                                    <Button text={"Watchlist +"}/>
                                 </div>
                             </div>
-                            <div className='bond-selected-credit-spread'>
-                                <h2>Credit Spread Prediction</h2>
-                                <div className='bond-selected-credit-spread-stats'>
-                                    <p className='bond-selected-credit-percentage'>{selectedRow.crSpreadSL}</p>
-                                    <p className='bond-selected-credit-crSpreadPred'>{selectedRow.crSpreadPred}</p>
+                            <div className='bond-selected-predictions'>
+                                <div className='bond-selected-credit-migration'>
+                                    <h2> Probability of Credit Migration </h2>
+                                    <div className='bond-selected-credit-migration-stats'>
+                                        {selectedRow && (<>
+                                        <p className='bond-selected-credit-percentage'>{selectedRow.crMigCL}</p>
+                                        <p className='bond-selected-credit-moodysRating'>{selectedRow.moodysRating}</p>
+                                        <p className='bond-selected-credit-crMigPred'>{selectedRow.crMigPred}</p>
+                                        </>)}
+                                    </div>
+                                </div>
+                                <div className='bond-selected-credit-spread'>
+                                    <h2>Credit Spread Prediction</h2>
+                                    <div className='bond-selected-credit-spread-stats'>
+                                        {selectedRow && (<>
+                                        <p className='bond-selected-credit-percentage'>{selectedRow.crSpreadSL}</p>
+                                        <p className='bond-selected-credit-crSpreadPred'>{selectedRow.crSpreadPred}</p>
+                                        </>)}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </>)}
+                    </div>
+                </div>
+                <div className='bond-selected-graph'>
+                    <h2 className='bond-selected-graph-title'>Yield Comparison</h2>
+                    <MyLineChart/>
                 </div>
             </div>
             {selectedCountry && (<h2>Selected Country: {selectedCountry.label}</h2>)}
