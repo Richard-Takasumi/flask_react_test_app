@@ -1,7 +1,7 @@
 # AlchemicApp
 
-Ensure to install "concurrently" and "flask" first.
-
+Ensure to install "concurrently", "TypeSript" and "flask" first.
+`npm install -g typescript`
 `npm install -g concurrently`
 `pip install flask`
 
