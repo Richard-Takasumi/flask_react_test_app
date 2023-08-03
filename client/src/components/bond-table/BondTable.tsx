@@ -133,7 +133,7 @@ export default function BondTable({ data, onRowSelected }) {
         <DataGridPro
           rows={data}
           columns={columns}
-          getRowId={(row) => row.id} // Here I'm using the `name` property as the id. Replace `name` with the appropriate property in your data.
+          getRowId={(row) => row.BondID} // Here I'm using the `name` property as the id. Replace `name` with the appropriate property in your data.
           onRowSelectionModelChange={onRowSelected}
           onRowClick={handleRowClick}
           rowSelectionModel={[]}
