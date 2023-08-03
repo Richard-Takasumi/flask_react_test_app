@@ -1,5 +1,5 @@
 import React from 'react'
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGridPro } from '@mui/x-data-grid-pro';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import './BondTable.scss'
@@ -130,7 +130,7 @@ export default function BondTable({ data, onRowSelected }) {
   return (
     <ThemeProvider theme={darkTheme}>
       <div style={{ height: '100%', width: '100%' }}>
-        <DataGrid
+        <DataGridPro
           rows={data}
           columns={columns}
           getRowId={(row) => row.id} // Here I'm using the `name` property as the id. Replace `name` with the appropriate property in your data.
