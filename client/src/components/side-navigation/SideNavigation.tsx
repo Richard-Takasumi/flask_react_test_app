@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom'
 export const SideNavigation = () => {
     return (
         <div className="side-navigation">
-            <Link className='link' to="dashboard"> <MdOutlineDashboardCustomize className='icon'/> </Link>
+            <Link className='link' to="camels"> <MdOutlineDashboardCustomize className='icon'/> </Link>
             <Link className='link' to="bond-overview"> <AiOutlineStock className='icon'/> </Link>
             <Link className='link' to="watchlist"> <AiOutlineEye className='icon'/> </Link>
             <Link className='link' to="portfolio"> <PiSuitcaseSimpleLight className='icon'/> </Link>
