@@ -1,0 +1,152 @@
+.bond-page-container{
+    background-color: #161B21;
+    width: 100%;
+}
+
+.bond-filter-container {
+    display:flex;
+    width: 100%;
+    justify-content: flex-start;
+
+}
+.bond-filter-item {
+    width: 10%;
+    margin-right: 1rem;
+
+}
+
+.bond-table-container{
+    // background-color: #1D232C;
+    margin-right: 5%;
+    margin-top: 2%;
+    height: 50vh;
+}
+
+.bond-selected-item-graph-container {
+    display: flex;
+    height: 30vh;
+    margin-right: 5%;
+    margin-top: 2%;
+    .bond-selected-graph {
+        background-color: #1D232C;
+        width: 50%;
+        height: 100%;
+        margin-left: 2%;
+        border-radius: 12px;
+        
+        .bond-selected-graph-title {
+            color: #EEF0F4;
+            font-size: 1.2em;
+            margin-left: 2%;
+        }
+    }
+}
+
+
+.bond-selected-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    border-radius: 12px;
+    background-color: #1D232C;
+    .bond-selected-item {
+        height: 100%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        margin-right: 2%;
+        .bond-selected-title {
+            display: flex;
+            height: 50%;
+            width: 100%;
+            
+            .bond-selected-title-text {
+
+                .bond-selected-name {
+                    font-size: 1.5em;
+                    font-weight: bold;
+                }
+                .bond-selected-ticker {
+                    opacity: 75%;
+                }
+            }
+            .bond-selected-title-watchlist-button {
+                height: 50%;
+                align-self: center;
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.bond-selected-predictions {
+    display: flex;
+    gap: 2%;
+    padding-bottom: 2%;
+    height: 50%;
+    .bond-selected-credit-migration {
+        border: 1px solid white;
+        border-radius: 12px;;
+        width: 50%;
+        h2 {
+            text-align: center;
+            font-size: 1.25em;
+            color: #EEF0F4
+        }
+        .bond-selected-credit-migration-stats {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            .bond-selected-credit-moodysRating {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: #0664F1;
+            }
+            .bond-selected-credit-crMigPred {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: #FF2955;
+            }
+        }
+    }
+    
+    .bond-selected-credit-spread {
+        border: 1px solid white;
+        border-radius: 12px;;
+        width: 50%;
+        h2 {
+            text-align: center;
+            font-size: 1.25em;
+            color: #EEF0F4
+        }
+        .bond-selected-credit-spread-stats {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+
+            .bond-selected-credit-crSpreadPred {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: #FF2955;
+            }
+        }
+
+    }
+
+    .bond-selected-credit-percentage {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+h1 {
+    color: #EEF0F4;
+}
+
+p {
+    color: #EEF0F4;
+
+}

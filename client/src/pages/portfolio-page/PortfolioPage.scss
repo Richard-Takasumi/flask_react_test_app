@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.portfolio-page-container{
+    box-sizing: border-box;
+    background-color: #161B21;
+    height: 100vh;
+    width: 95%;
+    display: flex;
+}
+
+h2{ 
+    color: #EEF0F4;
+}
+
+
+h3, h4 {
+    font-size: 1rem;
+    color: #DDE1E8;
+    font-weight: 400;
+}
+
+
+.LHS-container {
+    box-sizing: border-box;
+    width: 46%;
+    display: flex; 
+    flex-direction:column;
+    margin-right: 2%;
+    margin-top: 2%;
+    .total-assets-container {
+        width: 47.5%;
+        background-color: #1D232C;
+        border-radius: 12px;
+        
+    }
+    
+    .profit-loss-container {
+        width: 47.5%;
+        background-color: #1D232C;
+        border-radius: 12px;
+    }
+
+    .text-container {
+        margin-left: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .top-holdings-container {   
+        background-color: #1D232C;
+        height: 25%;
+        margin-bottom: 4%;
+        margin-top: 4%;
+    }
+    .high-prob-downward-mig-container {
+        background-color: #1D232C;
+        height: 25%;
+        margin-bottom: 4%;
+    }
+    .high-prob-upward-mig-container{
+        background-color: #1D232C;
+        height: 25%;
+        margin-bottom: 4%;
+    }
+
+    .table-title {
+        font-size: 1.25rem;
+    }
+}
+
+.RHS-container {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex; 
+    flex-direction:column;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    .yield-trend-graph-container {
+        display: flex;
+        flex-direction: row;
+        background-color: #1D232C;
+        border-radius: 12px;
+        height: 50%;
+        width: 100%;
+        
+        .graph-container {
+            flex-grow: 1;
+            height: 600px;
+            width: 100%;
+        }
+    }
+    
+    .what-if-container {
+        background-color: #1D232C;
+        border-radius: 12px;
+        height: 50%;
+        width: 100%;
+        margin-top: 2%;
+        font-size: 1rem;
+    }
+}
+
